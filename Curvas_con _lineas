@@ -1,0 +1,71 @@
+xa=0
+ya=0
+xfa=0
+yfa=0
+xb=0
+yb=0
+xfb=0
+yfb=0
+xc=0
+yc=0
+xfc=0
+yfc=0
+xd=0
+yd=0
+xfd=0
+yfd=0
+
+def setup():
+    size(500,500)
+    
+def draw():
+    global xa
+    global ya
+    global xfa
+    global yfa
+    global xb
+    global yb
+    global xfb
+    global yfb
+    global xc
+    global yc
+    global xfc
+    global yfc
+    global xd
+    global yd
+    global xfd
+    global yfd
+    xa=width/2
+    ya=0
+    xfa=width/2
+    yfa=height/2
+    xb=width/2
+    yb=0
+    xfb=width/2
+    yfb=height/2
+    xc=width/2
+    yc=height/2
+    xfc=0
+    yfc=height/2
+    xd=width/2
+    yd=height/2
+    xfd=width
+    yfd=height/2
+    line(width/2,0,width/2,height)
+    line(0,height/2,width,height/2)
+    while xfa<width and ya<height/2:
+        line(xa,ya,xfa,yfa)
+        ya=ya+10
+        xfa=xfa+10
+    while xfb>0 and yb<height/2:
+        line(xb,yb,xfb,yfb)
+        yb=yb+10
+        xfb=xfb-10
+    while xfc<width/2 and yc<height:
+        line(xc,yc,xfc,yfc)
+        yc=yc+10
+        xfc=xfc+10
+    while xfd>width/2 and yd<height:
+        line(xd,yd,xfd,yfd)
+        yd=yd+10
+        xfd=xfd-10
